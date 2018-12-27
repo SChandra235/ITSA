@@ -14,10 +14,10 @@ from mtranslate import translate
 
 # next, we initialize VADER so we can use it within our Python script
 sid = SentimentIntensityAnalyzer()
-api = twitter.Api(consumer_key='RuuPbFVWoDLw5dg7Ib7Bfvww5',
-  consumer_secret='YxETYSCDbFQ3Zn5be2biN0fbXj4WnKJn5QPr8TCz8zQgjL5DwG',
-  access_token_key='2351340067-4i9oqFneGEdxydryj99n5TJDiJcUK7nvcoU3wP0',
-  access_token_secret='s7xp1e5y7uqzjqsFN9t3vyvsDTr9Kw3O33nRAckK4mFqg')
+api = twitter.Api(consumer_key='CONSUMER_KEY',
+  consumer_secret='CONSUMER_SECRET',
+  access_token_key='TOKEN_KEY',
+  access_token_secret='TOKEN_SECRET')
 #help(api.GetUserTimeline)
 t = api.GetUserTimeline(screen_name="SrBachchan", count=20)
 tweets = [i.AsDict() for i in t]
